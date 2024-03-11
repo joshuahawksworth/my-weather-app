@@ -22,7 +22,7 @@ const SearchBar: React.FC<{ onSearch: (city: string) => void }> = ({ onSearch })
   return (
     <div className="flex flex-col items-center mb-4">
       <div className="flex items-center">
-        <input className="border border-gray-300 rounded py-2 px-4 mr-2 text-black" type="text" value={city} onChange={(e) => setCity(e.target.value)} />
+        <input className="border border-gray-300 rounded py-2 px-4 mr-2 text-black" type="text" value={city} placeholder='Enter city' onChange={(e) => setCity(e.target.value)} />
         <button className="bg-blue-500 text-white font-semibold py-2 px-4 rounded" onClick={handleSearch}>Search</button>
       </div>
       {error && <p className="text-red-500 mt-2 text-center">{error}</p>}
