@@ -1,5 +1,6 @@
-const BASE_URL = 'https://api.weatherapi.com/v1/current.json';
 import { Weather } from "@/types/weather";
+
+const BASE_URL = 'https://api.weatherapi.com/v1/current.json';
 
 export const getWeather = async (city: string): Promise<Weather> => {
     const response = await fetch(`${BASE_URL}?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${city}`);
